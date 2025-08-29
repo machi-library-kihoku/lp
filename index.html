@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>まちライブラリー@きほく | 本を通じて人と出会うまちの小さな図書室</title>
+    <meta name="description" content="三重県紀北町の小さな図書室。本を通じて人と出会う、気まぐれ不定期にOPENするまちライブラリーです。紀伊長島駅から徒歩5分、オークワと役場の間にあります。">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo.png" alt="まちライブラリー@きほく" class="logo-img">
+                </div>
+                <div class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="nav" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="#about">まちライブラリーとは</a></li>
+                        <li><a href="#books">蔵書・カテゴリー</a></li>
+                        <li><a href="#access">アクセス</a></li>
+                        <li><a href="#events">イベント</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-title-container">
+                        <div class="hero-logo-circle">
+                            <img src="logo.png" alt="まちライブラリー@きほく ロゴ" class="hero-logo-img">
+                        </div>
+                        <h1 class="hero-title">まちライブラリー@きほく</h1>
+                    </div>
+                    <p class="hero-subtitle">「本」を通じて「人」と出会う<br>まちの小さな図書室</p>
+                    <div class="hero-info">
+                        <div class="info-badge">
+                            <div>
+                                <p class="badge-title">🕒 気まぐれ不定期にOPEN</p>
+                                <p class="badge-subtitle">開館日はInstagramのストーリーでお知らせ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/machi_library_kihoku/" class="cta-button" target="_blank" rel="noopener">
+                        <span class="cta-icon">📱</span>
+                        Instagramで開館情報をチェック
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- まちライブラリーについて -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">まちライブラリーとは</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>まちライブラリーは、「本」を通じて「人」と出会うまちの図書館です。</p>
+                        <p>個人や団体が自宅、店舗、病院、学校などに本棚を設置し、本の貸し借りを通じてコミュニケーションを生み出します。</p>
+                        <p>本に寄贈者のメッセージを記入し、次に読む人が感想を追加することで、本を媒介とした人とのつながりを育みます。</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <h3>📖 本を通じた交流</h3>
+                            <p>本を媒介として地域の人々が自然に交流できる場所です</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🏡 身近な場所で</h3>
+                            <p>気軽に立ち寄れる、まちの中の小さな図書室です</p>
+                        </div>
+                        <div class="feature">
+                            <h3>💬 メッセージでつながる</h3>
+                            <p>本にメッセージを書いて、読書を通じた対話を楽しめます</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 蔵書・カテゴリー -->
+        <section id="books" class="books">
+            <div class="container">
+                <h2 class="section-title">蔵書・カテゴリー</h2>
+                <div class="books-intro">
+                    <p>まちライブラリー@きほくでは、地域の皆様から寄贈いただいた<br>様々なジャンルの本をご用意しています。</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <h3>📖 小説・文芸</h3>
+                        <p>日本文学、海外文学、エッセイなど、<br>心に響く物語をお楽しみいただけます。</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>📚 実用書・ビジネス</h3>
+                        <p>スキルアップや日常生活に役立つ<br>実用的な本をご用意しています。</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>🌱 暮らし・健康</h3>
+                        <p>料理、園芸、健康管理など、豊かな暮らしのヒントが見つかります。</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>🎨 趣味・アート</h3>
+                        <p>手芸、絵画、音楽など、創作活動のインスピレーションを。</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>👨‍👩‍👧‍👦 子育て・教育</h3>
+                        <p>子育てのヒントや教育に関する本で、家族の時間を豊かに。</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>🌍 地域・歴史</h3>
+                        <p>紀北町や三重県の歴史、文化に関する本も充実しています。</p>
+                    </div>
+                </div>
+                <div class="books-note">
+                    <p>📝 <strong>本の寄贈について：</strong>お気に入りの一冊にメッセージを添えてお持ちいただければ、次の読者へとつながります。<br>皆様のご協力をお待ちしております。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- イベント情報 -->
+        <section id="events" class="events">
+            <div class="container">
+                <h2 class="section-title">イベント・お知らせ</h2>
+                <div class="events-content">
+                    <div class="event-card">
+                        <h3>開館情報</h3>
+                        <p>最新の開館情報はInstagramのストーリーでお知らせしています。フォローしてご確認ください。</p>
+                        <a href="https://www.instagram.com/machi_library_kihoku/" target="_blank" rel="noopener" class="event-link">Instagramをフォロー</a>
+                    </div>
+                    <div class="event-card">
+                        <h3>本の寄贈について</h3>
+                        <p>まちライブラリーでは皆様からの本の寄贈を受け付けています。お気に入りの一冊にメッセージを添えてお持ちください。</p>
+                    </div>
+                    <div class="event-card">
+                        <h3>読書会・お茶会</h3>
+                        <p>不定期で読書会やお茶会を開催しています。本を通じた交流を楽しみませんか？</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセス情報 -->
+        <section id="access" class="access">
+            <div class="container">
+                <h2 class="section-title">アクセス</h2>
+                <div class="access-content">
+                    <div class="access-info">
+                        <div class="info-item">
+                            <h3>📍 所在地</h3>
+                            <p>三重県紀北町<br>
+                            紀伊長島駅から徒歩5分<br>
+                            オークワと役場の間<br>
+                            まちライブラリーののぼりが目印🚩</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>🕒 開館時間</h3>
+                            <p>気まぐれ不定期にOPEN<br>
+                            開館日はInstagramのストーリーで<br>
+                            お知らせします</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>🚃 アクセス</h3>
+                            <p>JR紀勢本線「紀伊長島駅」より徒歩5分<br>
+                            お車でお越しの方は近隣の駐車場を<br>
+                            ご利用ください</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ</h2>
+                <div class="contact-content">
+                    <p>まちライブラリー@きほくについてのお問い合わせは、InstagramのDMまたは投稿へのコメントでお気軽にお声がけください。</p>
+                    <div class="contact-links">
+                        <a href="https://www.instagram.com/machi_library_kihoku/" target="_blank" rel="noopener" class="contact-button">
+                            📱 Instagram
+                        </a>
+                        <a href="https://machi-library.org/" target="_blank" rel="noopener" class="contact-button">
+                            🌐 まちライブラリー公式サイト
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="まちライブラリー@きほく" class="footer-logo-img">
+                </div>
+                <div class="footer-info">
+                    <p>まちライブラリー@きほく</p>
+                    <p>三重県紀北町 | 紀伊長島駅から徒歩5分</p>
+                    <p>Instagram: <a href="https://www.instagram.com/machi_library_kihoku/" target="_blank" rel="noopener">@machi_library_kihoku</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 まちライブラリー@きほく. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ハンバーガーメニューとヘッダースクロールの機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const navMenu = document.getElementById('navMenu');
+            const header = document.querySelector('.header');
+            
+            // ハンバーガーメニュー機能
+            hamburgerMenu.addEventListener('click', function() {
+                // ハンバーガーアイコンのアニメーション
+                hamburgerMenu.classList.toggle('active');
+                // ナビゲーションメニューの表示切り替え
+                navMenu.classList.toggle('active');
+            });
+            
+            // メニューリンクをクリックしたときにメニューを閉じる
+            const navLinks = document.querySelectorAll('.nav-list a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburgerMenu.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+            
+            // メニュー外をクリックしたときにメニューを閉じる
+            document.addEventListener('click', function(event) {
+                if (!hamburgerMenu.contains(event.target) && !navMenu.contains(event.target)) {
+                    hamburgerMenu.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+            
+            // スクロール時のヘッダー背景変更
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
