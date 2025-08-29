@@ -891,10 +891,24 @@ section {
         font-size: 2rem;
         white-space: normal;
         line-height: 1.2;
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 5px rgba(0, 0, 0, 0.8),
+            0 0 10px rgba(0, 0, 0, 0.6);
     }
     
     .hero-subtitle {
         font-size: 1.4rem;
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 4px rgba(0, 0, 0, 0.8),
+            0 0 8px rgba(0, 0, 0, 0.6);
     }
     
     .info-badge {
