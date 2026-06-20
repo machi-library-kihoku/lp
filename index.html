@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>まちライブラリー@きほく | 本を通じて人と出会うまちの小さな図書室</title>
-    <meta name="description" content="三重県紀北町の小さな図書室。本を通じて人と出会う、気まぐれ不定期にOPENするまちライブラリーです。紀伊長島駅から徒歩5分、オークワと役場の間にあります。">
+    <title>まちライブラリー＠きほく | 旅の途中に、ひらく本があります。</title>
+    <meta name="description" content="三重県紀北町の小さな私設図書室。本を通じて人と出会える場所です。紀伊長島駅から徒歩5分。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="logo.png" alt="まちライブラリー@きほく" class="logo-img">
+                    <img src="logo.png" alt="まちライブラリー＠きほく" class="logo-img">
                 </div>
-                <div class="hamburger-menu" id="hamburgerMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
                 <nav class="nav" id="navMenu">
                     <ul class="nav-list">
-                        <li><a href="#about">まちライブラリーとは</a></li>
-                        <li><a href="#books">蔵書・カテゴリー</a></li>
-                        <li><a href="#access">アクセス</a></li>
+                        <li><a href="#about">ライブラリーとは</a></li>
+                        <li><a href="#books">本棚をのぞく</a></li>
                         <li><a href="#events">イベント</a></li>
+                        <li><a href="#access">アクセス</a></li>
                         <li><a href="#contact">お問い合わせ</a></li>
                     </ul>
                 </nav>
@@ -33,232 +35,497 @@
     </header>
 
     <main>
-        <!-- ヒーローセクション -->
+
+        <!-- ============ ヒーロー ============ -->
         <section class="hero">
             <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-title-container">
-                        <div class="hero-logo-circle">
-                            <img src="logo.png" alt="まちライブラリー@きほく ロゴ" class="hero-logo-img">
-                        </div>
-                        <h1 class="hero-title">まちライブラリー@きほく</h1>
+            <div class="hero-content">
+                <div class="hero-inner">
+                    <p class="hero-tag kiwi">まちライブラリー＠きほく</p>
+                    <h1 class="hero-title">旅の途中に、<br><em>ひらく本</em>があります。</h1>
+                    <div class="hero-divider"></div>
+                    <p class="hero-sub">三重県紀北町の小さな私設図書室。<br>本を通じて、人と出会える場所です。</p>
+                    <div class="hero-buttons">
+                        <a href="#books" class="btn btn-primary">本棚をのぞいてみる</a>
+                        <a href="https://www.instagram.com/machi_library_kihoku/" class="btn btn-secondary" target="_blank" rel="noopener">Instagramで開館日を見る</a>
                     </div>
-                    <p class="hero-subtitle">「本」を通じて「人」と出会う<br>まちの小さな図書室</p>
-                    <div class="hero-info">
-                        <div class="info-badge">
-                            <div>
-                                <p class="badge-title">🕒 気まぐれ不定期にOPEN</p>
-                                <p class="badge-subtitle">開館日はInstagramのストーリーでお知らせ</p>
+                </div>
+            </div>
+            <div class="hero-scroll kiwi">scroll</div>
+        </section>
+
+        <!-- ============ まちライブラリーとは ============ -->
+        <section id="about" class="about">
+            <div class="container">
+                <p class="section-label reveal">about</p>
+                <h2 class="section-title reveal">本を通じて、<br>人と出会う場所です。</h2>
+                <div class="section-rule reveal"></div>
+                <div class="about-content">
+                    <div class="about-photo-col reveal">
+                        <img src="bookshelf.jpeg" alt="まちライブラリー＠きほくの本棚" class="about-img">
+                    </div>
+                    <div class="about-text-col">
+                        <div class="about-text reveal reveal-delay-1">
+                            <p>まちライブラリー＠きほくは、本を通じて、人と人がゆるやかにつながる小さな図書室です。</p>
+                            <p>気になった本を手に取ったり、借りたり、寄贈された本に添えられたメッセージを読んだり。</p>
+                            <p>旅の途中や暮らしの合間に、ふらっと立ち寄れる場所を目指しています。</p>
+                        </div>
+                        <div class="about-features">
+                            <div class="feature reveal reveal-delay-1">
+                                <div class="feature-icon">📚</div>
+                                <div class="feature-body">
+                                    <h3>本を借りるだけでも大丈夫です</h3>
+                                    <p>気になった本を、そっと手に取ってみてください。</p>
+                                </div>
+                            </div>
+                            <div class="feature reveal reveal-delay-2">
+                                <div class="feature-icon">🔖</div>
+                                <div class="feature-body">
+                                    <h3>寄贈された本が並んでいます</h3>
+                                    <p>本には、寄贈者からのメッセージが添えられていることもあります。</p>
+                                </div>
+                            </div>
+                            <div class="feature reveal reveal-delay-3">
+                                <div class="feature-icon">☕</div>
+                                <div class="feature-body">
+                                    <h3>本をきっかけに交流できます</h3>
+                                    <p>読書会やイベントの日には、本を通じた小さな交流も生まれます。</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <a href="https://www.instagram.com/machi_library_kihoku/" class="cta-button" target="_blank" rel="noopener">
-                        <span class="cta-icon">📱</span>
-                        Instagramで開館情報をチェック
-                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- まちライブラリーについて -->
-        <section id="about" class="about">
+        <!-- ============ はじめての方へ ============ -->
+        <section id="welcome" class="welcome">
             <div class="container">
-                <h2 class="section-title">まちライブラリーとは</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>まちライブラリーは、「本」を通じて「人」と出会うまちの図書館です。</p>
-                        <p>個人や団体が自宅、店舗、病院、学校などに本棚を設置し、本の貸し借りを通じてコミュニケーションを生み出します。</p>
-                        <p>本に寄贈者のメッセージを記入し、次に読む人が感想を追加することで、本を媒介とした人とのつながりを育みます。</p>
+                <p class="section-label reveal">welcome</p>
+                <h2 class="section-title reveal">はじめての方も、<br>ふらっとどうぞ。</h2>
+                <div class="section-rule section-rule-cream reveal"></div>
+                <div class="welcome-cards">
+                    <div class="welcome-card reveal reveal-delay-1">
+                        <div class="welcome-card-icon">👀</div>
+                        <h3>見るだけでも大丈夫です</h3>
+                        <p>気になる本を、ゆっくり眺めてください。お気軽にどうぞ。</p>
                     </div>
-                    <div class="about-features">
-                        <div class="feature">
-                            <h3>📖 本を通じた交流</h3>
-                            <p>本を媒介として地域の人々が自然に交流できる場所です</p>
-                        </div>
-                        <div class="feature">
-                            <h3>🏡 身近な場所で</h3>
-                            <p>気軽に立ち寄れる、まちの中の小さな図書室です</p>
-                        </div>
-                        <div class="feature">
-                            <h3>💬 メッセージでつながる</h3>
-                            <p>本にメッセージを書いて、読書を通じた対話を楽しめます</p>
-                        </div>
+                    <div class="welcome-card reveal reveal-delay-2">
+                        <div class="welcome-card-icon">📱</div>
+                        <h3>開館日はInstagramで確認できます</h3>
+                        <p>不定期OPENのため、最新情報をストーリーズ等でご確認ください。</p>
+                    </div>
+                    <div class="welcome-card reveal reveal-delay-3">
+                        <div class="welcome-card-icon">🎁</div>
+                        <h3>本の寄贈も歓迎しています</h3>
+                        <p>お気に入りの一冊にメッセージを添えてお持ちください。</p>
                     </div>
                 </div>
+                <p class="welcome-note reveal">入館料・登録不要。どなたでもお気軽にどうぞ。</p>
             </div>
         </section>
 
-
-        <!-- 蔵書・カテゴリー -->
-        <section id="books" class="books">
+        <!-- ============ 本棚をのぞく ============ -->
+        <section id="books" class="books-section">
             <div class="container">
-                <h2 class="section-title">蔵書・カテゴリー</h2>
-                <div class="books-intro">
-                    <p>まちライブラリー@きほくでは、地域の皆様から寄贈いただいた<br>様々なジャンルの本をご用意しています。</p>
-                </div>
-                <div class="categories-grid">
-                    <div class="category-card">
-                        <h3>📖 小説・文芸</h3>
-                        <p>日本文学、海外文学、エッセイなど、<br>心に響く物語をお楽しみいただけます。</p>
-                    </div>
-                    <div class="category-card">
-                        <h3>📚 実用書・ビジネス</h3>
-                        <p>スキルアップや日常生活に役立つ<br>実用的な本をご用意しています。</p>
-                    </div>
-                    <div class="category-card">
-                        <h3>🌱 暮らし・健康</h3>
-                        <p>料理、園芸、健康管理など、豊かな暮らしのヒントが見つかります。</p>
-                    </div>
-                    <div class="category-card">
-                        <h3>🎨 趣味・アート</h3>
-                        <p>手芸、絵画、音楽など、創作活動のインスピレーションを。</p>
-                    </div>
-                    <div class="category-card">
-                        <h3>👨‍👩‍👧‍👦 子育て・教育</h3>
-                        <p>子育てのヒントや教育に関する本で、家族の時間を豊かに。</p>
-                    </div>
-                    <div class="category-card">
-                        <h3>🌍 地域・歴史</h3>
-                        <p>紀北町や三重県の歴史、文化に関する本も充実しています。</p>
+                <p class="section-label reveal">books</p>
+                <h2 class="section-title reveal">本棚を少し、のぞいてみる。</h2>
+                <div class="section-rule reveal"></div>
+                <p class="section-lead reveal">暮らし、旅、ビジネス、絵本、物語など、さまざまな本が並んでいます。<br>気になる一冊があれば、ぜひ手に取ってみてください。</p>
+
+                <!-- おすすめ本カード -->
+                <div class="featured-grid" id="featuredBooks">
+                    <div class="featured-loading">
+                        <div class="loading-spinner"></div>
+                        <p>本棚を読み込んでいます…</p>
                     </div>
                 </div>
-                <div class="books-note">
-                    <p>📝 <strong>本の寄贈について：</strong>お気に入りの一冊にメッセージを添えてお持ちいただければ、次の読者へとつながります。<br>皆様のご協力をお待ちしております。</p>
+
+                <!-- すべての蔵書を見るボタン -->
+                <div class="show-all-wrap">
+                    <button class="btn btn-outline" id="showAllBtn">すべての蔵書を見る ↓</button>
                 </div>
+
+                <!-- 全蔵書リスト（初期非表示） -->
+                <div class="full-books-wrap" id="fullBooksWrap">
+                    <div class="full-books-inner">
+                        <div class="filter-wrap">
+                            <div class="filter-tags" id="filterTags">
+                                <button class="filter-tag active" data-category="all">すべて</button>
+                            </div>
+                        </div>
+                        <p class="books-count" id="booksCount"></p>
+
+                        <div class="books-status" id="booksLoading">
+                            <div class="loading-spinner"></div>
+                            <p>蔵書情報を読み込んでいます…</p>
+                        </div>
+                        <div class="books-status" id="booksError" style="display:none">
+                            <p>蔵書情報の読み込みに失敗しました。しばらくしてから再度お試しください。</p>
+                        </div>
+                        <div class="books-status" id="booksEmpty" style="display:none">
+                            <p>このカテゴリーの本は現在ありません。</p>
+                        </div>
+
+                        <!-- PC: テーブル -->
+                        <div class="books-table-wrap" id="booksTableWrap">
+                            <table class="books-table">
+                                <thead>
+                                    <tr>
+                                        <th>タイトル</th>
+                                        <th>著者</th>
+                                        <th>カテゴリー</th>
+                                        <th>貸出状況</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="booksTableBody"></tbody>
+                            </table>
+                        </div>
+
+                        <!-- モバイル: カード -->
+                        <div class="books-cards" id="booksCards"></div>
+                    </div>
+
+                    <div class="books-donate">
+                        <p>🎁 <strong>本の寄贈について</strong>　お気に入りの一冊にメッセージを添えてお持ちいただければ、次の読者へとつながります。</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- イベント情報 -->
+        <!-- ============ イベント ============ -->
         <section id="events" class="events">
             <div class="container">
-                <h2 class="section-title">イベント・お知らせ</h2>
-                <div class="events-content">
-                    <div class="event-card">
-                        <h3>開館情報</h3>
-                        <p>最新の開館情報はInstagramのストーリーでお知らせしています。フォローしてご確認ください。</p>
-                        <a href="https://www.instagram.com/machi_library_kihoku/" target="_blank" rel="noopener" class="event-link">Instagramをフォロー</a>
+                <p class="section-label reveal">events</p>
+                <h2 class="section-title reveal">本を囲む日も、<br>あります。</h2>
+                <div class="section-rule reveal"></div>
+                <p class="section-lead reveal">「本をCAFEの日」をはじめ、ワークショップや交流イベントを不定期で開催しています。<br>開催情報はInstagramでお知らせします。</p>
+
+                <div class="events-grid">
+                    <div class="event-card reveal reveal-delay-1">
+                        <div class="event-card-icon">☕</div>
+                        <h3>本をCAFEの日</h3>
+                        <p>本を片手に、お茶を飲みながらゆっくり過ごせる日です。</p>
                     </div>
-                    <div class="event-card">
-                        <h3>本の寄贈について</h3>
-                        <p>まちライブラリーでは皆様からの本の寄贈を受け付けています。お気に入りの一冊にメッセージを添えてお持ちください。</p>
+                    <div class="event-card reveal reveal-delay-2">
+                        <div class="event-card-icon">✏️</div>
+                        <h3>ワークショップ</h3>
+                        <p>暮らしや学びをテーマにした、小さな体験の場を開いています。</p>
                     </div>
-                    <div class="event-card">
-                        <h3>読書会・お茶会</h3>
-                        <p>不定期で読書会やお茶会を開催しています。本を通じた交流を楽しみませんか？</p>
+                    <div class="event-card reveal reveal-delay-3">
+                        <div class="event-card-icon">🌿</div>
+                        <h3>交流イベント</h3>
+                        <p>本や地域をきっかけに、ゆるやかにつながる時間です。</p>
                     </div>
+                    <div class="event-card reveal reveal-delay-4">
+                        <div class="event-card-icon">📝</div>
+                        <h3>勉強会</h3>
+                        <p>気になるテーマを一緒に学び、話せる場をつくっています。</p>
+                    </div>
+                </div>
+
+                <div class="events-cta reveal">
+                    <a href="https://www.instagram.com/machi_library_kihoku/" class="btn btn-green" target="_blank" rel="noopener">Instagramで最新情報を見る</a>
                 </div>
             </div>
         </section>
 
-        <!-- アクセス情報 -->
+        <!-- ============ アクセス ============ -->
         <section id="access" class="access">
             <div class="container">
-                <h2 class="section-title">アクセス</h2>
+                <p class="section-label reveal">access</p>
+                <h2 class="section-title reveal">来てみてください。</h2>
+                <div class="section-rule reveal"></div>
                 <div class="access-content">
-                    <div class="access-info">
-                        <div class="info-item">
-                            <h3>📍 所在地</h3>
-                            <p>三重県紀北町<br>
-                            紀伊長島駅から徒歩5分<br>
-                            オークワと役場の間<br>
-                            まちライブラリーののぼりが目印🚩</p>
-                        </div>
-                        <div class="info-item">
-                            <h3>🕒 開館時間</h3>
-                            <p>気まぐれ不定期にOPEN<br>
-                            開館日はInstagramのストーリーで<br>
-                            お知らせします</p>
-                        </div>
-                        <div class="info-item">
-                            <h3>🚃 アクセス</h3>
-                            <p>JR紀勢本線「紀伊長島駅」より徒歩5分<br>
-                            お車でお越しの方は近隣の駐車場を<br>
-                            ご利用ください</p>
-                        </div>
+                    <div class="info-item reveal reveal-delay-1">
+                        <div class="info-icon">📍</div>
+                        <h3>所在地</h3>
+                        <p>三重県紀北町<br>紀伊長島駅から徒歩5分<br>オークワと役場の間にあります</p>
+                    </div>
+                    <div class="info-item reveal reveal-delay-2">
+                        <div class="info-icon">🕒</div>
+                        <h3>開館時間</h3>
+                        <p>不定期OPEN<br>開館日はInstagramのストーリーなどでお知らせしています</p>
+                    </div>
+                    <div class="info-item reveal reveal-delay-3">
+                        <div class="info-icon">🚃</div>
+                        <h3>アクセス</h3>
+                        <p>JR紀勢本線「紀伊長島駅」より徒歩5分<br>お車でお越しの方は、近隣の駐車場をご利用ください</p>
+                    </div>
+                </div>
+                <div class="access-photos">
+                    <div class="access-photo-item reveal reveal-delay-1">
+                        <img src="entrance.jpeg" alt="入口の様子" class="entrance-img">
+                        <p>向かいのパティスリーが目印です</p>
+                    </div>
+                    <div class="access-photo-item reveal reveal-delay-2">
+                        <img src="nobori.jpeg" alt="のぼり旗が目印" class="nobori-img">
+                        <p>まちライブラリーののぼり旗が目印です</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- お問い合わせ -->
+        <!-- ============ お問い合わせ ============ -->
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">お問い合わせ</h2>
-                <div class="contact-content">
-                    <p>まちライブラリー@きほくについてのお問い合わせは、InstagramのDMまたは投稿へのコメントでお気軽にお声がけください。</p>
-                    <div class="contact-links">
-                        <a href="https://www.instagram.com/machi_library_kihoku/" target="_blank" rel="noopener" class="contact-button">
-                            📱 Instagram
-                        </a>
-                        <a href="https://machi-library.org/" target="_blank" rel="noopener" class="contact-button">
-                            🌐 まちライブラリー公式サイト
-                        </a>
-                    </div>
+                <p class="section-label reveal">contact</p>
+                <h2 class="section-title section-title-cream reveal">お気軽にどうぞ。</h2>
+                <div class="section-rule section-rule-cream reveal"></div>
+                <p class="contact-text reveal">お問い合わせは、InstagramのDMまたはコメントでお気軽にお声がけください。</p>
+                <div class="contact-links reveal">
+                    <a href="https://www.instagram.com/machi_library_kihoku/" target="_blank" rel="noopener" class="btn btn-cream">📱 Instagram</a>
+                    <a href="https://machi-library.org/" target="_blank" rel="noopener" class="btn btn-cream">🌐 まちライブラリー公式サイト</a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="まちライブラリー@きほく" class="footer-logo-img">
+                    <img src="logo.png" alt="まちライブラリー＠きほく" class="footer-logo-img">
                 </div>
                 <div class="footer-info">
-                    <p>まちライブラリー@きほく</p>
-                    <p>三重県紀北町 | 紀伊長島駅から徒歩5分</p>
-                    <p>Instagram: <a href="https://www.instagram.com/machi_library_kihoku/" target="_blank" rel="noopener">@machi_library_kihoku</a></p>
+                    <p class="footer-name">まちライブラリー＠きほく</p>
+                    <p>三重県紀北町 ｜ 紀伊長島駅から徒歩5分</p>
+                    <p><a href="https://www.instagram.com/machi_library_kihoku/" target="_blank" rel="noopener">@machi_library_kihoku</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 まちライブラリー@きほく. All rights reserved.</p>
+                <p>&copy; 2025 まちライブラリー＠きほく</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // ハンバーガーメニューとヘッダースクロールの機能
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerMenu = document.getElementById('hamburgerMenu');
-            const navMenu = document.getElementById('navMenu');
-            const header = document.querySelector('.header');
-            
-            // ハンバーガーメニュー機能
-            hamburgerMenu.addEventListener('click', function() {
-                // ハンバーガーアイコンのアニメーション
-                hamburgerMenu.classList.toggle('active');
-                // ナビゲーションメニューの表示切り替え
-                navMenu.classList.toggle('active');
+    // ============================================================
+    // Google スプレッドシート CSV URL
+    // ============================================================
+    const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1CMPJVnEg43xj_WVq8ryXbv-zIq6RT4ELdVCdQwd-0Ng/export?format=csv';
+
+    // ============================================================
+    // CSV パーサー
+    // ============================================================
+    function parseCSV(text) {
+        const results = [];
+        for (const line of text.split('\n')) {
+            if (!line.trim()) continue;
+            const row = [];
+            let field = '', inQuotes = false;
+            for (let i = 0; i < line.length; i++) {
+                const c = line[i];
+                if (c === '"') {
+                    if (inQuotes && line[i+1] === '"') { field += '"'; i++; }
+                    else inQuotes = !inQuotes;
+                } else if (c === ',' && !inQuotes) { row.push(field); field = ''; }
+                else if (c !== '\r') field += c;
+            }
+            row.push(field);
+            results.push(row);
+        }
+        return results;
+    }
+
+    function esc(str) {
+        return String(str || '')
+            .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+            .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function statusLabel(raw) {
+        return (raw || '').trim() === '貸出不可'
+            ? { text:'館内閲覧のみ', cls:'status-restricted' }
+            : { text:'閲覧できます', cls:'status-ok' };
+    }
+
+    // ============================================================
+    // データ管理
+    // ============================================================
+    let allBooks = [];
+    const booksSection = document.querySelector('.books-section');
+
+    // おすすめ本カード（スプレッドシートの上から4冊）
+    function renderFeatured(books) {
+        const accents = ['mustard','green','terracotta','blue'];
+        const container = document.getElementById('featuredBooks');
+        if (!books.length) {
+            container.innerHTML = '<p class="featured-empty">本棚の情報を取得できませんでした。</p>';
+            return;
+        }
+        container.innerHTML = books.slice(0,4).map((b, i) => {
+            const s = statusLabel(b.statusRaw);
+            return `<div class="featured-card accent-${accents[i % 4]}">
+                <span class="featured-num kiwi">No.${String(i+1).padStart(2,'0')}</span>
+                <span class="featured-cat">${esc(b.category)}</span>
+                <h3 class="featured-title">${esc(b.title)}</h3>
+                <p class="featured-author">${esc(b.author)}</p>
+                <span class="status-badge ${s.cls}">${s.text}</span>
+            </div>`;
+        }).join('');
+    }
+
+    // 全蔵書リスト
+    function renderBooks(category) {
+        const filtered = (category === 'all' ? [...allBooks] : allBooks.filter(b => b.category === category))
+            .sort((a, b) => a.title.localeCompare(b.title, 'ja'));
+
+        document.getElementById('booksCount').textContent = filtered.length > 0 ? `${filtered.length} 冊` : '';
+
+        const emptyEl = document.getElementById('booksEmpty');
+        if (filtered.length === 0) {
+            booksSection.classList.remove('is-loaded');
+            emptyEl.style.display = 'flex';
+            return;
+        }
+        emptyEl.style.display = 'none';
+
+        document.getElementById('booksTableBody').innerHTML = filtered.map(b => {
+            const s = statusLabel(b.statusRaw);
+            return `<tr>
+                <td class="col-title">${esc(b.title)}</td>
+                <td class="col-author">${esc(b.author)}</td>
+                <td><span class="cat-tag">${esc(b.category)}</span></td>
+                <td><span class="status-badge ${s.cls}">${s.text}</span></td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('booksCards').innerHTML = filtered.map(b => {
+            const s = statusLabel(b.statusRaw);
+            return `<article class="book-card">
+                <p class="book-card-title">${esc(b.title)}</p>
+                <p class="book-card-author">${esc(b.author)}</p>
+                <div class="book-card-footer">
+                    <span class="cat-tag">${esc(b.category)}</span>
+                    <span class="status-badge ${s.cls}">${s.text}</span>
+                </div>
+            </article>`;
+        }).join('');
+
+        booksSection.classList.add('is-loaded');
+    }
+
+    // ============================================================
+    // CSV 読み込み
+    // ============================================================
+    async function loadBooks() {
+        const loadingEl = document.getElementById('booksLoading');
+        const errorEl   = document.getElementById('booksError');
+
+        try {
+            const res = await fetch(SHEET_CSV_URL);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const rows = parseCSV(await res.text());
+
+            const rawBooks = rows.slice(1)
+                .filter(row => row.length > 1 && (row[1]||'').trim())
+                .map(row => ({
+                    title:     (row[1]||'').trim(),
+                    author:    (row[2]||'').trim(),
+                    category:  (row[3]||'').trim(),
+                    statusRaw: (row[4]||'').trim(),
+                }));
+
+            renderFeatured(rawBooks);
+            allBooks = [...rawBooks];
+
+            const cats = [...new Set(allBooks.map(b => b.category).filter(c => c))];
+            const filterTags = document.getElementById('filterTags');
+            cats.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-tag';
+                btn.dataset.category = cat;
+                btn.textContent = cat;
+                filterTags.appendChild(btn);
             });
-            
-            // メニューリンクをクリックしたときにメニューを閉じる
-            const navLinks = document.querySelectorAll('.nav-list a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    hamburgerMenu.classList.remove('active');
-                    navMenu.classList.remove('active');
-                });
+
+            filterTags.addEventListener('click', e => {
+                const btn = e.target.closest('.filter-tag');
+                if (!btn) return;
+                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                btn.classList.add('active');
+                renderBooks(btn.dataset.category);
             });
-            
-            // メニュー外をクリックしたときにメニューを閉じる
-            document.addEventListener('click', function(event) {
-                if (!hamburgerMenu.contains(event.target) && !navMenu.contains(event.target)) {
-                    hamburgerMenu.classList.remove('active');
-                    navMenu.classList.remove('active');
+
+            loadingEl.style.display = 'none';
+            renderBooks('all');
+
+        } catch (err) {
+            console.error(err);
+            document.getElementById('featuredBooks').innerHTML = '<p class="featured-empty">本棚の情報を取得できませんでした。</p>';
+            loadingEl.style.display = 'none';
+            errorEl.style.display = 'flex';
+        }
+    }
+
+    // ============================================================
+    // 「すべての蔵書を見る」トグル
+    // ============================================================
+    document.getElementById('showAllBtn').addEventListener('click', function() {
+        const wrap = document.getElementById('fullBooksWrap');
+        const isOpen = wrap.classList.toggle('open');
+        this.textContent = isOpen ? '一覧を閉じる ↑' : 'すべての蔵書を見る ↓';
+        if (isOpen) {
+            setTimeout(() => wrap.scrollIntoView({ behavior:'smooth', block:'start' }), 50);
+        }
+    });
+
+    // ============================================================
+    // スクロールアニメーション（Intersection Observer）
+    // ============================================================
+    function initReveal() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-            
-            // スクロール時のヘッダー背景変更
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    // ============================================================
+    // ハンバーガーメニュー & ヘッダー
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburgerMenu');
+        const nav       = document.getElementById('navMenu');
+        const header    = document.querySelector('.header');
+
+        hamburger.addEventListener('click', function() {
+            const open = hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', String(open));
+        });
+
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                hamburger.setAttribute('aria-expanded','false');
             });
         });
+
+        document.addEventListener('click', e => {
+            if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                hamburger.setAttribute('aria-expanded','false');
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        initReveal();
+        loadBooks();
+    });
     </script>
 </body>
 </html>
