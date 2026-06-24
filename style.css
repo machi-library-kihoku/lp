@@ -325,8 +325,17 @@ button { cursor: pointer; font-family: inherit; }
 .events-section { border-top: 1px solid var(--border); }
 
 .events-section h2 {
-  font-size: 36px; font-weight: 500; line-height: 1.5; margin-bottom: 48px;
+  font-size: 36px; font-weight: 500; line-height: 1.5; margin-bottom: 20px;
 }
+
+.events-note {
+  font-size: 13px; color: var(--text-weak); margin-bottom: 40px;
+}
+.events-note a {
+  color: var(--accent); border-bottom: 1px solid rgba(176,106,71,.3);
+  padding-bottom: 1px; transition: opacity .2s;
+}
+.events-note a:hover { opacity: .7; }
 
 .event-photo {
   width: 100%; aspect-ratio: 1/1;
