@@ -276,6 +276,10 @@ button { cursor: pointer; font-family: inherit; }
   font-weight: 500; font-size: .75rem; letter-spacing: .08em;
   white-space: nowrap; position: sticky; top: 0; z-index: 2;
 }
+.sortable { cursor: pointer; user-select: none; }
+.sortable:hover { background: #4a443a; }
+.sortable.sort-active { background: #4a443a; }
+.sort-icon { margin-left: 6px; opacity: .6; font-style: normal; }
 .books-table tbody tr { border-bottom: 1px solid var(--border); transition: background .15s; }
 .books-table tbody tr:last-child { border-bottom: none; }
 .books-table tbody tr:hover { background: rgba(56,51,42,.04); }
@@ -325,17 +329,17 @@ button { cursor: pointer; font-family: inherit; }
 .events-section { border-top: 1px solid var(--border); }
 
 .events-section h2 {
-  font-size: 36px; font-weight: 500; line-height: 1.5; margin-bottom: 20px;
+  font-size: 36px; font-weight: 500; line-height: 1.5; margin-bottom: 56px;
 }
 
 .events-note {
-  font-size: 13px; color: var(--text-weak); margin-bottom: 40px;
+  font-size: 13px; color: var(--text-weak); margin-bottom: 20px;
 }
 .events-note a {
-  color: var(--accent); border-bottom: 1px solid rgba(176,106,71,.3);
+  color: var(--text-weak); border-bottom: 1px solid rgba(111,103,87,.4);
   padding-bottom: 1px; transition: opacity .2s;
 }
-.events-note a:hover { opacity: .7; }
+.events-note a:hover { opacity: .6; }
 
 .event-photo {
   width: 100%; aspect-ratio: 1/1;
