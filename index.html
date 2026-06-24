@@ -122,10 +122,10 @@
                             <table class="books-table">
                                 <thead>
                                     <tr>
-                                        <th>タイトル</th>
-                                        <th>著者</th>
-                                        <th>カテゴリー</th>
-                                        <th>貸出状況</th>
+                                        <th class="sortable" data-key="title">タイトル <span class="sort-icon">↕</span></th>
+                                        <th class="sortable" data-key="author">著者 <span class="sort-icon">↕</span></th>
+                                        <th class="sortable" data-key="category">カテゴリー <span class="sort-icon">↕</span></th>
+                                        <th class="sortable" data-key="status">貸出状況 <span class="sort-icon">↕</span></th>
                                     </tr>
                                 </thead>
                                 <tbody id="booksTableBody"></tbody>
@@ -247,7 +247,8 @@
     }
 
     function statusLabel(raw) {
-        return (raw || '').trim() === '貸出不可'
+        const v = (raw || '').trim().toUpperCase();
+        return (v === 'TRUE' || v === '貸出不可')
             ? { text:'館内閲覧のみ', cls:'status-restricted' }
             : { text:'閲覧できます', cls:'status-ok' };
     }
@@ -256,16 +257,30 @@
     // データ管理
     // ============================================================
     let allBooks = [];
+    let sortKey = 'title';
+    let sortAsc = true;
     const booksSection = document.querySelector('.books-section');
 
-    // 背表紙カード（スプレッドシートの上から6冊）
+    // 背表紙カード（カテゴリーごとにランダム1冊、最大6冊）
     function renderSpine(books) {
         const grid = document.getElementById('spineGrid');
         if (!books.length) {
             grid.innerHTML = '<p style="color:var(--text-weak);font-size:.875rem;padding:2rem 0;">本棚の情報を取得できませんでした。</p>';
             return;
         }
-        grid.innerHTML = books.slice(0, 6).map((b, i) => {
+        // カテゴリーごとにランダム1冊ずつ選ぶ
+        const byCategory = {};
+        books.forEach(b => {
+            if (!b.category) return;
+            if (!byCategory[b.category]) byCategory[b.category] = [];
+            byCategory[b.category].push(b);
+        });
+        const picks = Object.values(byCategory)
+            .map(arr => arr[Math.floor(Math.random() * arr.length)])
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 6);
+
+        grid.innerHTML = picks.map((b, i) => {
             const color = SPINE_COLORS[i % SPINE_COLORS.length];
             return `<div class="spine-card" style="background:${color}">
                 <span class="spine-title">${esc(b.title)}</span>
@@ -276,15 +291,41 @@
 
     // 全蔵書リスト
     function renderBooks(category) {
+        const getValue = (b, key) => {
+            if (key === 'title')    return b.title;
+            if (key === 'author')   return b.author;
+            if (key === 'category') return b.category;
+            if (key === 'status')   return statusLabel(b.statusRaw).text;
+            return '';
+        };
+
         const filtered = (category === 'all' ? [...allBooks] : allBooks.filter(b => b.category === category))
-            .sort((a, b) => a.title.localeCompare(b.title, 'ja'));
+            .sort((a, b) => {
+                const av = getValue(a, sortKey);
+                const bv = getValue(b, sortKey);
+                const cmp = av.localeCompare(bv, 'ja', { numeric: true });
+                return sortAsc ? cmp : -cmp;
+            });
+
+        // ヘッダーのアイコン更新
+        document.querySelectorAll('.sortable').forEach(th => {
+            const icon = th.querySelector('.sort-icon');
+            if (th.dataset.key === sortKey) {
+                icon.textContent = sortAsc ? '↑' : '↓';
+                th.classList.add('sort-active');
+            } else {
+                icon.textContent = '↕';
+                th.classList.remove('sort-active');
+            }
+        });
 
         document.getElementById('booksCount').textContent = filtered.length > 0 ? `${filtered.length} 冊` : '';
 
         const emptyEl = document.getElementById('booksEmpty');
         if (filtered.length === 0) {
-            booksSection.classList.remove('is-loaded');
             emptyEl.style.display = 'flex';
+            document.getElementById('booksTableBody').innerHTML = '';
+            document.getElementById('booksCards').innerHTML = '';
             return;
         }
         emptyEl.style.display = 'none';
@@ -354,6 +395,21 @@
                 document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
                 btn.classList.add('active');
                 renderBooks(btn.dataset.category);
+            });
+
+            // ヘッダーソートのイベント
+            document.querySelectorAll('.sortable').forEach(th => {
+                th.addEventListener('click', () => {
+                    const key = th.dataset.key;
+                    if (sortKey === key) {
+                        sortAsc = !sortAsc;
+                    } else {
+                        sortKey = key;
+                        sortAsc = true;
+                    }
+                    const active = document.querySelector('.filter-tag.active');
+                    renderBooks(active ? active.dataset.category : 'all');
+                });
             });
 
             loadingEl.style.display = 'none';
