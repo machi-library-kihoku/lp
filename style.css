@@ -129,6 +129,10 @@ button { cursor: pointer; font-family: inherit; }
   width: 100%; height: 560px; object-fit: cover;
 }
 
+.hero-img {
+  filter: sepia(8%) brightness(105%) saturate(105%) contrast(96%);
+}
+
 .hero-caption {
   position: absolute; bottom: -20px; left: -20px;
   background: var(--base);
@@ -324,13 +328,21 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 36px; font-weight: 500; line-height: 1.5; margin-bottom: 48px;
 }
 
-.events-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
+.event-photo {
+  width: 100%; aspect-ratio: 1/1;
+  object-fit: cover; display: block;
 }
 
-.event-cell { background: var(--base); padding: 32px 24px; }
+.events-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  column-gap: 14px; row-gap: 0;
+}
+
+.event-cell {
+  background: var(--base); padding: 32px 24px;
+  aspect-ratio: 1/1; display: flex; flex-direction: column; justify-content: center;
+  border: 1px solid var(--border); border-bottom: none;
+}
 .event-cell h3 { font-size: 17px; font-weight: 500; margin-bottom: 14px; }
 .event-cell p { font-size: 13px; line-height: 1.9; color: var(--text-weak); }
 
@@ -356,6 +368,14 @@ button { cursor: pointer; font-family: inherit; }
   display: block; color: var(--accent-lt);
   font-size: 12px; letter-spacing: .1em; margin-bottom: 4px;
 }
+
+.access-instagram {
+  display: inline-block; margin-top: 10px;
+  font-size: 13px; color: var(--accent-lt);
+  letter-spacing: .05em; border-bottom: 1px solid rgba(201,138,100,.4);
+  padding-bottom: 2px; transition: opacity .2s;
+}
+.access-instagram:hover { opacity: .7; }
 
 .access-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .access-photos img { width: 100%; height: 300px; object-fit: cover; }
