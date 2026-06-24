@@ -200,14 +200,15 @@ button { cursor: pointer; font-family: inherit; }
 /* Spine grid */
 .spine-grid {
   display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px;
-  margin-bottom: 24px; overflow: hidden;
+  margin-bottom: 24px;
 }
 
 .spine-card {
-  aspect-ratio: 3/4.4; border-radius: 2px;
+  height: 260px; border-radius: 2px;
   padding: 16px 12px;
   display: flex; flex-direction: column; justify-content: space-between;
   box-shadow: var(--shadow-card);
+  overflow: hidden;
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .spine-card:hover {
@@ -218,9 +219,11 @@ button { cursor: pointer; font-family: inherit; }
 .spine-title {
   font-size: 13px; font-weight: 500; color: #fffdf7;
   line-height: 1.5; writing-mode: vertical-rl;
+  overflow: hidden;
+  flex: 1; min-height: 0;
 }
 
-.spine-cat { font-size: 10px; color: rgba(255,253,247,.7); }
+.spine-cat { font-size: 10px; color: rgba(255,253,247,.7); flex-shrink: 0; }
 
 .spine-loading {
   grid-column: 1/-1;
@@ -428,6 +431,7 @@ button { cursor: pointer; font-family: inherit; }
 @media (max-width: 960px) {
   :root { --pad-x: 36px; }
   .spine-grid { grid-template-columns: repeat(4, 1fr); }
+  .spine-card { height: 220px; }
   .about-features { grid-template-columns: 1fr 1fr; gap: 32px; }
   .events-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -467,6 +471,7 @@ button { cursor: pointer; font-family: inherit; }
   .books-header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .books-header h2 { font-size: 28px; }
   .spine-grid { grid-template-columns: repeat(3, 1fr); }
+  .spine-card { height: 200px; }
 
   .events-section h2 { font-size: 28px; }
 
@@ -488,6 +493,7 @@ button { cursor: pointer; font-family: inherit; }
   .hero-btns { flex-direction: column; }
   .btn-primary, .btn-secondary { text-align: center; }
   .spine-grid { grid-template-columns: repeat(2, 1fr); }
+  .spine-card { height: 180px; }
   .events-grid { grid-template-columns: 1fr; }
   .access-photos { grid-template-columns: 1fr; }
 }
