@@ -494,6 +494,9 @@ button { cursor: pointer; font-family: inherit; }
   .btn-primary, .btn-secondary { text-align: center; }
   .spine-grid { grid-template-columns: repeat(2, 1fr); }
   .spine-card { height: 180px; }
-  .events-grid { grid-template-columns: 1fr; }
-  .access-photos { grid-template-columns: 1fr; }
+  .events-grid { grid-template-columns: 1fr; margin-inline: 12px; row-gap: 12px; }
+  .event-cell { aspect-ratio: 1/1; height: auto; border-bottom: 1px solid var(--border); }
+  .event-photo { aspect-ratio: 1/1; height: auto; }
+  .access-photos { grid-template-columns: 1fr; margin-inline: 12px; gap: 12px; }
+  .access-photos img { height: auto; aspect-ratio: 1/1; }
 }
